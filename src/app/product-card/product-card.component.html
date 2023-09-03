@@ -6,22 +6,31 @@
     style="height: 17rem"
   />
   <div class="card-body">
-    <h5 class="card-title">{{ product.title | shortText : 35 }}</h5>
+    <h5 class="card-title fs-4">{{ product.title | shortText : 25 }}</h5>
     <p class="card-text">
       {{ product.description | shortText : 40 }}
     </p>
-    <p
-      class="card-text fw-bold"
-      [ngClass]="product.stock ? 'text-success' : 'text-danger'"
-    >
-      {{ product.stock | checkInStock }}
-    </p>
-    <button
-      class="btn btn-primary me-3 mt-5"
-      (click)="showProductDetails(product.id)"
-    >
-      Details
-    </button>
-    <a routerLink="cart" class="btn btn-success mt-5">Add to cart</a>
+    <div class="d-flex justify-content-between">
+      <p
+        class="card-text fs-5 fw-bold m-0"
+        [ngClass]="product.stock ? 'text-success' : 'text-danger'"
+      >
+        {{ product.stock | checkInStock }}
+      </p>
+      <p class="card-text fs-5 text price">
+        {{ product.price | currency }}
+      </p>
+    </div>
+    <div class="mt-4">
+      <button
+        class="btn btn-primary me-3 mt-2"
+        (click)="showProductDetails(product.id)"
+      >
+        Details
+      </button>
+      <a routerLink="cart" class="btn btn-success mt-2" *ngIf="product.stock"
+        >Add to cart</a
+      >
+    </div>
   </div>
 </div>

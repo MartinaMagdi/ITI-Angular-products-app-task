@@ -5,6 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ShortTextPipe implements PipeTransform {
   transform(value: string, length: number): string {
-    return value.substring(0, length) + '...';
+    if (value.length > length) {
+      return value.substring(0, length) + '...';
+    } else {
+      return value;
+    }
   }
 }

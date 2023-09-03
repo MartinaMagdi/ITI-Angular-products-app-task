@@ -39,7 +39,7 @@
   <div class="col-12 col-md-5">
     <div class="card mb-3">
       <div class="card-body">
-        <h5 class="card-title fw-bold">{{ selectedProduct.title }}</h5>
+        <h5 class="card-title fw-bold fs-3">{{ selectedProduct.title }}</h5>
         <p class="card-text">
           {{ selectedProduct.description }}
         </p>
@@ -48,10 +48,31 @@
           {{ selectedProduct.price | currency }}
         </p>
 
-        <div class="product-footer border-top border-secondary pt-2">
+        <ul>
+          <li>
+            <span class="fw-bold text-muted">Category:</span>
+            {{ selectedProduct.category }}
+          </li>
+          <li>
+            <span class="fw-bold text-muted">Brand:</span>
+            {{ selectedProduct.brand }}/li>
+          </li>
+          <li>
+            <span class="fw-bold text-muted">Stock:</span>
+            {{ selectedProduct.stock }}
+          </li>
+          <li>
+            <span class="fw-bold text-muted">Discount Percentage:</span>
+            {{ selectedProduct.discountPercentage }}
+          </li>
+        </ul>
+
+        <div
+          class="d-flex justify-content-between border-top border-secondary pt-2"
+        >
           <p class="card-text text-muted m-0">
             <small class="text-body-secondary">{{
-              selectedProduct.createdAt | date
+              selectedProduct.createdAt | date : "MMMM, yyyy"
             }}</small>
           </p>
           <p
@@ -61,6 +82,12 @@
             {{ selectedProduct.stock | checkInStock }}
           </p>
         </div>
+        <a
+          routerLink="cart"
+          class="btn btn-success mt-4 w-100"
+          *ngIf="selectedProduct.stock"
+          >Add to cart</a
+        >
       </div>
     </div>
   </div>
