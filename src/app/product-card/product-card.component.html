@@ -1,0 +1,27 @@
+<div class="card" style="min-height: 25rem">
+  <img
+    [src]="product.thumbnail"
+    class="card-img-top"
+    [alt]="product.title"
+    style="height: 17rem"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ product.title | shortText : 35 }}</h5>
+    <p class="card-text">
+      {{ product.description | shortText : 40 }}
+    </p>
+    <p
+      class="card-text fw-bold"
+      [ngClass]="product.stock ? 'text-success' : 'text-danger'"
+    >
+      {{ product.stock | checkInStock }}
+    </p>
+    <button
+      class="btn btn-primary me-3 mt-5"
+      (click)="showProductDetails(product.id)"
+    >
+      Details
+    </button>
+    <a routerLink="cart" class="btn btn-success mt-5">Add to cart</a>
+  </div>
+</div>

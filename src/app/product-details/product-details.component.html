@@ -1,0 +1,67 @@
+<div class="row">
+  <div class="col-12 col-md-7">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-inner">
+        <ng-container
+          *ngFor="let img of selectedProduct.images; first as isFirst"
+        >
+          <div class="carousel-item" [ngClass]="{ active: isFirst }">
+            <img
+              [src]="img"
+              class="d-block w-40 m-auto"
+              alt="..."
+              height="600rem"
+            />
+          </div>
+        </ng-container>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-5">
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">{{ selectedProduct.title }}</h5>
+        <p class="card-text">
+          {{ selectedProduct.description }}
+        </p>
+
+        <p class="card-text fs-4 text price">
+          {{ selectedProduct.price | currency }}
+        </p>
+
+        <div class="product-footer border-top border-secondary pt-2">
+          <p class="card-text text-muted m-0">
+            <small class="text-body-secondary">{{
+              selectedProduct.createdAt | date
+            }}</small>
+          </p>
+          <p
+            class="card-text fw-bold"
+            [ngClass]="selectedProduct.stock ? 'text-success' : 'text-danger'"
+          >
+            {{ selectedProduct.stock | checkInStock }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
