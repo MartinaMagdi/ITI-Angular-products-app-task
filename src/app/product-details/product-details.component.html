@@ -48,7 +48,13 @@
           {{ selectedProduct.price | currency }}
         </p>
 
-        <ul>
+        <p-rating
+          [(ngModel)]="selectedProduct.rating"
+          [cancel]="false"
+          [disabled]="true"
+        ></p-rating>
+
+        <ul class="mt-3">
           <li>
             <span class="fw-bold text-muted">Category:</span>
             {{ selectedProduct.category }}

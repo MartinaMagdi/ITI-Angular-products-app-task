@@ -5,7 +5,7 @@
     "description": "An apple mobile which is nothing like apple",
     "price": 549,
     "discountPercentage": 12.96,
-    "rating": 4.69,
+    "rating": 2.69,
     "stock": 94,
     "brand": "Apple",
     "category": "smartphones",
@@ -17,7 +17,7 @@
       "https://i.dummyjson.com/data/products/1/4.jpg",
       "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T16:41:31.124Z"
+    "createdAt": "2022-09-30T16:41:31.124Z"
   },
   {
     "id": 2,
@@ -36,7 +36,7 @@
       "https://i.dummyjson.com/data/products/2/3.jpg",
       "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T02:45:19.349Z"
+    "createdAt": "2022-09-30T02:45:19.349Z"
   },
   {
     "id": 3,
@@ -50,7 +50,7 @@
     "category": "smartphones",
     "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
     "images": ["https://i.dummyjson.com/data/products/3/1.jpg"],
-    "createdAt":"2022-09-30T07:21:14.130Z"
+    "createdAt": "2022-09-30T07:21:14.130Z"
   },
   {
     "id": 4,
@@ -70,7 +70,7 @@
       "https://i.dummyjson.com/data/products/4/4.jpg",
       "https://i.dummyjson.com/data/products/4/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T02:32:29.522Z"
+    "createdAt": "2022-09-30T02:32:29.522Z"
   },
   {
     "id": 5,
@@ -88,7 +88,7 @@
       "https://i.dummyjson.com/data/products/5/2.jpg",
       "https://i.dummyjson.com/data/products/5/3.jpg"
     ],
-    "createdAt":"2022-09-30T03:09:25.056Z"
+    "createdAt": "2022-09-30T03:09:25.056Z"
   },
   {
     "id": 6,
@@ -107,7 +107,7 @@
       "https://i.dummyjson.com/data/products/6/3.png",
       "https://i.dummyjson.com/data/products/6/4.jpg"
     ],
-    "createdAt":"2022-09-30T11:57:53.372Z"
+    "createdAt": "2022-09-30T11:57:53.372Z"
   },
   {
     "id": 7,
@@ -126,7 +126,7 @@
       "https://i.dummyjson.com/data/products/7/3.jpg",
       "https://i.dummyjson.com/data/products/7/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T11:57:53.372Z"
+    "createdAt": "2022-09-30T11:57:53.372Z"
   },
   {
     "id": 8,
@@ -146,7 +146,7 @@
       "https://i.dummyjson.com/data/products/8/4.jpg",
       "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T11:57:53.372Z"
+    "createdAt": "2022-09-30T11:57:53.372Z"
   },
   {
     "id": 9,
@@ -166,7 +166,7 @@
       "https://i.dummyjson.com/data/products/9/4.jpg",
       "https://i.dummyjson.com/data/products/9/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T16:41:31.124Z"
+    "createdAt": "2022-09-30T16:41:31.124Z"
   },
   {
     "id": 10,
@@ -185,7 +185,7 @@
       "https://i.dummyjson.com/data/products/10/3.jpg",
       "https://i.dummyjson.com/data/products/10/thumbnail.jpeg"
     ],
-    "createdAt":"2022-09-30T16:41:31.124Z"
+    "createdAt": "2022-09-30T16:41:31.124Z"
   },
   {
     "id": 11,
@@ -204,7 +204,7 @@
       "https://i.dummyjson.com/data/products/11/3.jpg",
       "https://i.dummyjson.com/data/products/11/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T16:41:31.124Z"
+    "createdAt": "2022-09-30T16:41:31.124Z"
   },
   {
     "id": 12,
@@ -224,7 +224,7 @@
       "https://i.dummyjson.com/data/products/12/4.jpg",
       "https://i.dummyjson.com/data/products/12/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T16:41:31.124Z"
+    "createdAt": "2022-09-30T16:41:31.124Z"
   },
   {
     "id": 13,
@@ -244,7 +244,7 @@
       "https://i.dummyjson.com/data/products/13/4.jpg",
       "https://i.dummyjson.com/data/products/13/thumbnail.webp"
     ],
-    "createdAt":"2022-09-30T02:45:19.349Z"
+    "createdAt": "2022-09-30T02:45:19.349Z"
   },
   {
     "id": 14,
@@ -263,7 +263,7 @@
       "https://i.dummyjson.com/data/products/14/3.jpg",
       "https://i.dummyjson.com/data/products/14/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T02:45:19.349Z"
+    "createdAt": "2022-09-30T02:45:19.349Z"
   },
   {
     "id": 15,
@@ -283,7 +283,7 @@
       "https://i.dummyjson.com/data/products/15/4.jpg",
       "https://i.dummyjson.com/data/products/15/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T02:45:19.349Z"
+    "createdAt": "2022-09-30T02:45:19.349Z"
   },
   {
     "id": 16,
@@ -303,7 +303,7 @@
       "https://i.dummyjson.com/data/products/16/4.jpg",
       "https://i.dummyjson.com/data/products/16/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T02:45:19.349Z"
+    "createdAt": "2022-09-30T02:45:19.349Z"
   },
   {
     "id": 17,
@@ -322,7 +322,7 @@
       "https://i.dummyjson.com/data/products/17/3.jpg",
       "https://i.dummyjson.com/data/products/17/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T11:57:53.372Z"
+    "createdAt": "2022-09-30T11:57:53.372Z"
   },
   {
     "id": 18,
@@ -342,7 +342,7 @@
       "https://i.dummyjson.com/data/products/18/4.jpg",
       "https://i.dummyjson.com/data/products/18/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T07:21:14.130Z"
+    "createdAt": "2022-09-30T07:21:14.130Z"
   },
   {
     "id": 19,
@@ -361,7 +361,7 @@
       "https://i.dummyjson.com/data/products/19/3.png",
       "https://i.dummyjson.com/data/products/19/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T07:21:14.130Z"
+    "createdAt": "2022-09-30T07:21:14.130Z"
   },
   {
     "id": 20,
@@ -381,7 +381,7 @@
       "https://i.dummyjson.com/data/products/20/4.jpg",
       "https://i.dummyjson.com/data/products/20/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T07:21:14.130Z"
+    "createdAt": "2022-09-30T07:21:14.130Z"
   },
   {
     "id": 21,
@@ -399,7 +399,7 @@
       "https://i.dummyjson.com/data/products/21/2.jpg",
       "https://i.dummyjson.com/data/products/21/3.jpg"
     ],
-    "createdAt":"2022-09-30T07:21:14.130Z"
+    "createdAt": "2022-09-30T07:21:14.130Z"
   },
   {
     "id": 22,
@@ -417,7 +417,7 @@
       "https://i.dummyjson.com/data/products/22/2.jpg",
       "https://i.dummyjson.com/data/products/22/3.jpg"
     ],
-    "createdAt":"2022-09-30T02:32:29.522Z"
+    "createdAt": "2022-09-30T02:32:29.522Z"
   },
   {
     "id": 23,
@@ -437,7 +437,7 @@
       "https://i.dummyjson.com/data/products/23/4.jpg",
       "https://i.dummyjson.com/data/products/23/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T02:32:29.522Z"
+    "createdAt": "2022-09-30T02:32:29.522Z"
   },
   {
     "id": 24,
@@ -457,7 +457,7 @@
       "https://i.dummyjson.com/data/products/24/4.jpg",
       "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T02:32:29.522Z"
+    "createdAt": "2022-09-30T02:32:29.522Z"
   },
   {
     "id": 25,
@@ -477,7 +477,7 @@
       "https://i.dummyjson.com/data/products/25/4.jpg",
       "https://i.dummyjson.com/data/products/25/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T02:32:29.522Z"
+    "createdAt": "2022-09-30T02:32:29.522Z"
   },
   {
     "id": 26,
@@ -498,7 +498,7 @@
       "https://i.dummyjson.com/data/products/26/5.jpg",
       "https://i.dummyjson.com/data/products/26/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T03:09:25.056Z"
+    "createdAt": "2022-09-30T03:09:25.056Z"
   },
   {
     "id": 27,
@@ -518,7 +518,7 @@
       "https://i.dummyjson.com/data/products/27/4.jpg",
       "https://i.dummyjson.com/data/products/27/thumbnail.webp"
     ],
-    "createdAt":"2022-09-30T03:09:25.056Z"
+    "createdAt": "2022-09-30T03:09:25.056Z"
   },
   {
     "id": 28,
@@ -538,7 +538,7 @@
       "https://i.dummyjson.com/data/products/28/4.jpg",
       "https://i.dummyjson.com/data/products/28/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T03:09:25.056Z"
+    "createdAt": "2022-09-30T03:09:25.056Z"
   },
   {
     "id": 29,
@@ -558,7 +558,7 @@
       "https://i.dummyjson.com/data/products/29/4.webp",
       "https://i.dummyjson.com/data/products/29/thumbnail.webp"
     ],
-    "createdAt":"2022-09-30T03:09:25.056Z"
+    "createdAt": "2022-09-30T03:09:25.056Z"
   },
   {
     "id": 30,
@@ -577,6 +577,6 @@
       "https://i.dummyjson.com/data/products/30/3.jpg",
       "https://i.dummyjson.com/data/products/30/thumbnail.jpg"
     ],
-    "createdAt":"2022-09-30T03:09:25.056Z"
+    "createdAt": "2022-09-30T03:09:25.056Z"
   }
 ]
