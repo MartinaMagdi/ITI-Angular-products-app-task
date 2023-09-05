@@ -61,7 +61,7 @@
           </li>
           <li>
             <span class="fw-bold text-muted">Brand:</span>
-            {{ selectedProduct.brand }}/li>
+            {{ selectedProduct.brand }}
           </li>
           <li>
             <span class="fw-bold text-muted">Stock:</span>
@@ -89,7 +89,7 @@
           </p>
         </div>
         <a
-          routerLink="cart"
+          routerLink="/cart"
           class="btn btn-success mt-4 w-100"
           *ngIf="selectedProduct.stock"
           >Add to cart</a
