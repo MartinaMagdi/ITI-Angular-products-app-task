@@ -15,7 +15,7 @@ import { CheckInStockPipe } from './pipes/check-in-stock.pipe';
 import { ShortTextPipe } from './pipes/short-text.pipe';
 
 import { RatingModule } from 'primeng/rating';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,13 @@ import { FormsModule } from '@angular/forms';
     CheckInStockPipe,
     ShortTextPipe,
   ],
-  imports: [BrowserModule, AppRoutingModule, RatingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RatingModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

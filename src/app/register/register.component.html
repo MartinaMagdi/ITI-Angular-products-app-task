@@ -1,1 +1,144 @@
-<p>register works!</p>
+<form
+  [formGroup]="registerForm"
+  (ngSubmit)="register()"
+  class="row g-3 needs-validation mx-5 px-5"
+>
+  <div class="col-12">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" formControlName="name" />
+    <div
+      class="form-text text-danger"
+      *ngIf="
+        registerForm.controls['name'].touched &&
+        registerForm.controls['name'].invalid
+      "
+    >
+      <small *ngIf="registerForm.controls['name'].errors?.['required']"
+        >This field is required.</small
+      >
+    </div>
+  </div>
+
+  <div class="col-12">
+    <label for="email" class="form-label">Email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      formControlName="email"
+    />
+    <div
+      class="form-text text-danger"
+      *ngIf="
+        registerForm.controls['email'].touched &&
+        registerForm.controls['email'].invalid
+      "
+    >
+      <small *ngIf="registerForm.controls['email'].errors?.['required']"
+        >This field is required.</small
+      >
+      <small *ngIf="registerForm.controls['email'].errors?.['email']"
+        >Please enter a valid email address.</small
+      >
+    </div>
+  </div>
+
+  <div class="col-12">
+    <label for="userName" class="form-label">User Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="userName"
+      formControlName="userName"
+    />
+    <div
+      class="form-text text-danger"
+      *ngIf="
+        registerForm.controls['userName'].touched &&
+        registerForm.controls['userName'].invalid
+      "
+    >
+      <small *ngIf="registerForm.controls['userName'].errors?.['required']"
+        >This field is required.</small
+      >
+      <small *ngIf="registerForm.controls['userName'].errors?.['pattern']"
+        >Please enter a valid userName without any spaces.</small
+      >
+    </div>
+  </div>
+
+  <div class="col-12">
+    <label for="password" class="form-label">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password"
+      formControlName="password"
+    />
+    <div
+      class="form-text text-danger"
+      *ngIf="
+        registerForm.controls['password'].touched &&
+        registerForm.controls['password'].invalid
+      "
+    >
+      <small *ngIf="registerForm.controls['password'].errors?.['required']"
+        >This field is required.</small
+      >
+
+      <div *ngIf="registerForm.controls['password'].errors?.['pattern']">
+        <small>Please enter a valid password that</small>
+        <ul>
+          <li>length not less than 8 characters</li>
+          <li>contains at least one lowercase</li>
+          <li>contains at least one uppercase</li>
+          <li>contains at least one digit</li>
+          <li>contains at least one special character</li>
+          <li>example : P@ssword1234</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <label for="confirmPassword" class="form-label">Confirm Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="confirmPassword"
+      formControlName="confirmPassword"
+    />
+    <div class="form-text text-danger">
+      <small
+        *ngIf=" registerForm.controls['confirmPassword'].touched &&
+        registerForm.controls['confirmPassword'].invalid && registerForm.controls['confirmPassword'].errors?.['required']"
+        >This field is required.</small
+      >
+
+      <small
+        *ngIf="
+          registerForm.value['confirmPassword'] &&
+          registerForm.value['password'] !==
+            registerForm.value['confirmPassword']
+        "
+        >The password isn't matched.</small
+      >
+    </div>
+  </div>
+
+  <div class="col-12 mt-4">
+    <button
+      class="btn btn-primary w-100"
+      type="submit"
+      [disabled]="registerForm.invalid"
+    >
+      Register
+    </button>
+  </div>
+
+  <div class="col-12 mt-5">
+    <p class="fw-bold text-center">
+      Already have an account! <a routerLink="/login">Login</a>
+    </p>
+  </div>
+</form>
