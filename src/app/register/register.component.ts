@@ -13,7 +13,6 @@ import {
 })
 export class RegisterComponent {
   registerForm!: FormGroup;
-  isMatched!: boolean;
 
   constructor(private fb: FormBuilder) {}
 
