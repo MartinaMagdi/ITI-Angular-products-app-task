@@ -11,7 +11,6 @@ import { Product } from '../interfaces/product';
 export class ProductDetailsComponent {
   products!: Array<Product>;
   selectedProduct!: any;
-  ratingValue: number = 4.69;
   constructor(private activeRoute: ActivatedRoute) {}
 
   ngOnInit() {
