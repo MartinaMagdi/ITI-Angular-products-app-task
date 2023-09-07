@@ -9,6 +9,7 @@ import { CartService } from '../services/cart.service';
 export class CartComponent {
   cart!: Array<any>;
   newCart!: Array<any>;
+  totalPrice!: number;
 
   constructor(private cartService: CartService) {}
 
@@ -16,6 +17,8 @@ export class CartComponent {
     this.cartService.getCart().subscribe((val) => {
       this.cart = val;
     });
+
+    this.calculateTotalPrice();
   }
 
   increaseQuantity(product: any) {
@@ -27,6 +30,7 @@ export class CartComponent {
     });
 
     this.setNewCartUsingService();
+    this.calculateTotalPrice();
   }
 
   decreaseQuantity(product: any) {
@@ -38,14 +42,26 @@ export class CartComponent {
     });
 
     this.setNewCartUsingService();
+    this.calculateTotalPrice();
   }
 
   deleteProductFromCart(product: any) {
     this.newCart = this.cart.filter((item) => item.id !== product.id);
     this.setNewCartUsingService();
+    this.calculateTotalPrice();
   }
 
   setNewCartUsingService() {
     this.cartService.setCart(this.newCart);
+  }
+
+  calculateTotalPrice() {
+    this.totalPrice = 0;
+
+    if (this.cart.length > 0) {
+      this.cart.forEach((item) => {
+        this.totalPrice += item.price * item.quantity;
+      });
+    }
   }
 }
