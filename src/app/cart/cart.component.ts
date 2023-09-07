@@ -8,6 +8,7 @@ import { CartService } from '../services/cart.service';
 })
 export class CartComponent {
   cart!: Array<any>;
+  newCart!: Array<any>;
 
   constructor(private cartService: CartService) {}
 
@@ -15,5 +16,36 @@ export class CartComponent {
     this.cartService.getCart().subscribe((val) => {
       this.cart = val;
     });
+  }
+
+  increaseQuantity(product: any) {
+    this.newCart = this.cart.map((item) => {
+      if (product.id === item.id) {
+        ++item.quantity;
+      }
+      return item;
+    });
+
+    this.setNewCartUsingService();
+  }
+
+  decreaseQuantity(product: any) {
+    this.newCart = this.cart.map((item) => {
+      if (product.id === item.id) {
+        --item.quantity;
+      }
+      return item;
+    });
+
+    this.setNewCartUsingService();
+  }
+
+  deleteProductFromCart(product: any) {
+    this.newCart = this.cart.filter((item) => item.id !== product.id);
+    this.setNewCartUsingService();
+  }
+
+  setNewCartUsingService() {
+    this.cartService.setCart(this.newCart);
   }
 }
