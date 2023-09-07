@@ -20,7 +20,6 @@ export class ProductsListComponent {
     // to set products array from api
     this.productsService.getProductsList().subscribe({
       next: (res) => {
-        console.log(res);
         this.products = res.products;
       },
       error: (err) => console.log(err),

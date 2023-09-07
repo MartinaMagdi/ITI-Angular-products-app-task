@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CartCounterService } from '../services/cart-counter.service';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -9,11 +9,14 @@ import { CartCounterService } from '../services/cart-counter.service';
 export class HeaderComponent {
   cartCounter!: number;
 
-  constructor(private CartCounterService: CartCounterService) {}
+  constructor(private cartService: CartService) {}
 
   ngOnInit() {
-    this.CartCounterService.getCartCounterVal().subscribe(
-      (val) => (this.cartCounter = val)
-    );
+    this.cartService.getCart().subscribe((cart) => {
+      this.cartCounter = 0;
+      cart.forEach((item) => {
+        this.cartCounter += item['quantity'];
+      });
+    });
   }
 }
