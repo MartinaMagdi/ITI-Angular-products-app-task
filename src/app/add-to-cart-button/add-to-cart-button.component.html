@@ -1,0 +1,8 @@
+<button
+  class="btn btn-success mt-2"
+  [ngClass]="{ 'w-100': buttonFullWidth }"
+  *ngIf="product.stock"
+  (click)="addToCart(product.id)"
+>
+  Add to cart
+</button>

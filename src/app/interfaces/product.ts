@@ -10,5 +10,5 @@ export interface Product {
   category: string;
   thumbnail: string;
   images: Array<string>;
-  createdAt: string | Date;
+  createdAt?: string | Date;
 }

@@ -28,9 +28,7 @@
       >
         Details
       </button>
-      <a routerLink="cart" class="btn btn-success mt-2" *ngIf="product.stock"
-        >Add to cart</a
-      >
+      <app-add-to-cart-button [product]="product"></app-add-to-cart-button>
     </div>
   </div>
 </div>

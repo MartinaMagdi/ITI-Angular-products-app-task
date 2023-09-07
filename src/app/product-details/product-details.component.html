@@ -74,13 +74,13 @@
         </ul>
 
         <div
-          class="d-flex justify-content-between border-top border-secondary pt-2"
+          class="d-flex justify-content-between border-top border-secondary pt-2 mb-3"
         >
-          <p class="card-text text-muted m-0">
+          <!-- <p class="card-text text-muted m-0">
             <small class="text-body-secondary">{{
               selectedProduct.createdAt | date : "MMMM, yyyy"
             }}</small>
-          </p>
+          </p> -->
           <p
             class="card-text fw-bold"
             [ngClass]="selectedProduct.stock ? 'text-success' : 'text-danger'"
@@ -88,12 +88,10 @@
             {{ selectedProduct.stock | checkInStock }}
           </p>
         </div>
-        <a
-          routerLink="/cart"
-          class="btn btn-success mt-4 w-100"
-          *ngIf="selectedProduct.stock"
-          >Add to cart</a
-        >
+        <app-add-to-cart-button
+          [product]="selectedProduct"
+          [buttonFullWidth]="true"
+        ></app-add-to-cart-button>
       </div>
     </div>
   </div>

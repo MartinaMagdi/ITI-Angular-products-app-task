@@ -16,6 +16,8 @@ import { ShortTextPipe } from './pipes/short-text.pipe';
 
 import { RatingModule } from 'primeng/rating';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddToCartButtonComponent } from './add-to-cart-button/add-to-cart-button.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductDetailsComponent,
     CheckInStockPipe,
     ShortTextPipe,
+    AddToCartButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +40,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RatingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
