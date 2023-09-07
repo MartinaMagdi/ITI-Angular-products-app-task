@@ -11,4 +11,8 @@ export class ProductsService {
   getProductsList(): Observable<any> {
     return this.http.get('https://dummyjson.com/products');
   }
+
+  getProductDetails(id: number | string): Observable<any> {
+    return this.http.get(`https://dummyjson.com/products/${id}`);
+  }
 }
