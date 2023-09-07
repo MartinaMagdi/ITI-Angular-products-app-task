@@ -1,46 +1,57 @@
 <h2 class="mb-5">Cart</h2>
-<table class="table align-middle">
-  <thead>
-    <tr>
-      <th scope="col">Image</th>
-      <th scope="col">Name</th>
-      <th scope="col">Price</th>
-      <th scope="col">Quantity</th>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let product of cart">
-      <td scope="row">
-        <img width="200" [src]="product.thumbnail" [alt]="product.title" />
-      </td>
-      <td>{{ product.title }}</td>
-      <td>{{ product.price | currency }}</td>
-      <td>
-        <button
-          class="btn btn-success"
-          [disabled]="product.quantity == product.stock"
-          (click)="increaseQuantity(product)"
-        >
-          +
-        </button>
-        <span class="mx-4">{{ product.quantity }}</span>
-        <button
-          class="btn btn-danger"
-          [disabled]="product.quantity == 1"
-          (click)="decreaseQuantity(product)"
-        >
-          -
-        </button>
-      </td>
-      <td>
-        <button class="btn btn-danger" (click)="deleteProductFromCart(product)">
-          Delete
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<p class="text-end fs-4 mt-5 fw-medium" *ngIf="totalPrice > 0">
-  Total: {{ totalPrice }}
-</p>
+<ng-container *ngIf="cart.length > 0; else emptyCart">
+  <table class="table align-middle">
+    <thead>
+      <tr>
+        <th scope="col">Image</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of cart">
+        <td scope="row">
+          <img width="200" [src]="product.thumbnail" [alt]="product.title" />
+        </td>
+        <td>{{ product.title }}</td>
+        <td>{{ product.price | currency }}</td>
+        <td>
+          <button
+            class="btn btn-success"
+            [disabled]="product.quantity == product.stock"
+            (click)="increaseQuantity(product)"
+          >
+            +
+          </button>
+          <span class="mx-4">{{ product.quantity }}</span>
+          <button
+            class="btn btn-danger"
+            [disabled]="product.quantity == 1"
+            (click)="decreaseQuantity(product)"
+          >
+            -
+          </button>
+        </td>
+        <td>
+          <button
+            class="btn btn-danger"
+            (click)="deleteProductFromCart(product)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="text-end fs-4 mt-5 fw-medium" *ngIf="totalPrice > 0">
+    Total: {{ totalPrice }}
+  </p>
+</ng-container>
+
+<ng-template #emptyCart>
+  <p class="text-center fw-medium fs-3 text-danger">
+    There are no products in the cart.
+  </p>
+</ng-template>
