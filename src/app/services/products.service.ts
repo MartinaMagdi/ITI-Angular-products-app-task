@@ -15,4 +15,8 @@ export class ProductsService {
   getProductDetails(id: number | string): Observable<any> {
     return this.http.get(`https://dummyjson.com/products/${id}`);
   }
+
+  getSearchedProducts(keyword: string): Observable<any> {
+    return this.http.get(`https://dummyjson.com/products/search?q=${keyword}`);
+  }
 }

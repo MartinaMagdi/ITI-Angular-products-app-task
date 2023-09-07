@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CartService } from '../services/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +9,9 @@ import { CartService } from '../services/cart.service';
 })
 export class HeaderComponent {
   cartCounter!: number;
+  searchText: string = '';
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private router: Router) {}
 
   ngOnInit() {
     this.cartService.getCart().subscribe((cart) => {
@@ -18,5 +20,9 @@ export class HeaderComponent {
         this.cartCounter += item['quantity'];
       });
     });
+  }
+
+  search() {
+    this.router.navigate(['search', this.searchText]);
   }
 }

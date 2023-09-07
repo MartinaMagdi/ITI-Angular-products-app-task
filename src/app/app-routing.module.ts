@@ -6,6 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ShowSearchedProductsComponent } from './show-searched-products/show-searched-products.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,11 @@ const routes: Routes = [
   {
     path: 'product-details/:id',
     component: ProductDetailsComponent,
+  },
+
+  {
+    path: 'search/:keyword',
+    component: ShowSearchedProductsComponent,
   },
 
   {

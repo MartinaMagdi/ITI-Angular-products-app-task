@@ -11,7 +11,7 @@ import { ProductsService } from '../services/products.service';
 })
 export class ProductDetailsComponent {
   // products!: Array<Product>;
-  selectedProduct!: any;
+  selectedProduct: any = {};
   constructor(
     private activeRoute: ActivatedRoute,
     private productService: ProductsService

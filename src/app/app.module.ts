@@ -18,6 +18,7 @@ import { RatingModule } from 'primeng/rating';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddToCartButtonComponent } from './add-to-cart-button/add-to-cart-button.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ShowSearchedProductsComponent } from './show-searched-products/show-searched-products.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     CheckInStockPipe,
     ShortTextPipe,
     AddToCartButtonComponent,
+    ShowSearchedProductsComponent,
   ],
   imports: [
     BrowserModule,

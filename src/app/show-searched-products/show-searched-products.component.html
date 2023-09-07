@@ -1,0 +1,14 @@
+<ng-container *ngIf="products.length > 0; else emptyProducts">
+  <div class="row row-cols-1 row-cols-md-3 g-4 my-4">
+    <div class="col" *ngFor="let product of products">
+      <app-product-card [product]="product"></app-product-card>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #emptyProducts>
+  <p class="text-center mt-5 fs-4 fw-medium">
+    There is no matched products for
+    <span class="text-primary">{{ searchKeyword }}</span>
+  </p>
+</ng-template>
